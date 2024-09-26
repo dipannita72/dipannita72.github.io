@@ -10913,8 +10913,8 @@ p.lead {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   background-color: #495057;
   color: #fff;
   border-radius: 100%;
@@ -10983,4 +10983,28 @@ section.resume-section .resume-section-content {
 }
 .project-item i {
   color: #ff4500; /* Custom icon color */
+}
+
+.course-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.course-item {
+  margin-bottom: 10px;
+}
+.course-item a {
+  text-decoration: none;
+  color: #bd5d38 ;
+  font-style: italic;
+}
+.course-item a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+.github-link {
+  color: black;
+  margin-left: auto; /* Push the GitHub icon to the right */
+}
+.github-link:hover {
+  color: #bd5d38; /* Change color on hover */
 }
