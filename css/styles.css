@@ -102,6 +102,9 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 hr {
@@ -10985,26 +10988,144 @@ section.resume-section .resume-section-content {
   color: #ff4500; /* Custom icon color */
 }
 
+.course-container {
+  display: flex;
+  justify-content: space-between; /* Space between lists */
+  align-items: flex-start; /* Align items to the top */
+  gap: 05px; /* Space between lists */
+}
 .course-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style-type: none; /* Remove default list style */
+  padding-left: 0; /* Remove default padding */
+  width: 49.5%; /* Set width for side-by-side display */
+  /*border: 1px solid #ccc; /* Optional: Border around each list */
+  padding: 10px; /* Padding inside each list */
+  border-radius: 5px; /* Rounded corners */
 }
 .course-item {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space between list items */
 }
-.course-item a {
-  text-decoration: none;
-  color: #bd5d38 ;
-  font-style: italic;
-}
-.course-item a:hover {
-  text-decoration: underline;
-  color: #007bff;
-}
+
 .github-link {
   color: black;
   margin-left: auto; /* Push the GitHub icon to the right */
 }
 .github-link:hover {
   color: #bd5d38; /* Change color on hover */
+}
+
+.rounded-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #495057;
+  ;
+  text-decoration: none;
+  border-radius: 20px; /* Makes the sides rounded */
+  border: none; /* Removes the border */
+  text-align: center;
+  cursor: pointer; /* Adds a pointer cursor on hover */
+  margin-top: 20px; 
+}
+
+.rounded-button:hover {
+  background-color: #bd5d38; /* Darker blue on hover */
+}
+
+.publication {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures content remains within bounds */
+  position: relative; /* Sets a positioning context */
+  padding: 10px; /* Adds some padding for hover effect */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background change */
+}
+.publication:hover {
+  background-color: #f9f9f9; /* Light background on hover */
+}
+
+.details {
+  flex: 1; /* Takes the remaining space */
+  margin-right: 10px;
+}
+.year {
+  width: 50px; /* Fixed width for the year */
+  text-align: right; /* Align text to the right */
+  color: #bd5d38;
+}
+.title {
+  font-weight: bold; /* Makes title bold */
+}
+.authors, .conference {
+  margin-top: 5px;
+}
+.conference {
+  font-style: italic; /* Makes conference name italic */
+}
+
+ /* Hover text styling */
+ .hover-text {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.publication:hover .hover-text {
+  display: block; /* Show hover text when publication is hovered */
+  color: #bd5d38;
+}
+.project-item:hover .hover-text {
+  display: block; /* Show hover text when publication is hovered */
+  color: #bd5d38;
+}
+
+
+.skills-header {
+  font-size: 36px; /* Larger font for header */
+  font-weight: bold; /* Bold header */
+  margin-bottom: 30px; /* Space below the header */
+  text-align: center; /* Centered text */
+}
+.skills-category {
+  font-size: 20px; /* Category font size */
+  text-align: center; /* Center the category name */
+  margin-bottom: 20px; /* Space below each category */
+
+}
+.skills-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Space between skill cards */
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin-bottom: 50px; /* Space below each skills section */
+}
+.skill-card {
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border-radius: 15px; /* Rounded corners */
+  width: 60px; /* Fixed width */
+  height: 60px; /* Fixed height for uniformity */
+  text-align: center; /* Center the content */
+  padding: 20px; /* Padding inside the card */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+}
+.skill-card:hover {
+  transform: translateY(-10px); /* Lift up the card on hover */
+}
+.skill-card img {
+  width: 30px; /* Icon size */
+  height: 30px; /* Icon size */
+  margin-bottom: 10px; /* Space below the icon */
+}
+.skill-card span {
+  font-size: 14px; /* Font size for skill name */
+  color: #333; /* Dark text color */
 }
